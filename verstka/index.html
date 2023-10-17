@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <?php echo $title; ?>
+    </title>
+    <!--  fav icon  -->
+    <link rel="apple-touch-icon" sizes="76x76" href="../local/templates/main/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../local/templates/main/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../local/templates/main/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../local/templates/main/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../local/templates/main/assets/images/favicon/safari-pinned-tab.svg" color="#1d71b9">
+    <meta name="msapplication-TileColor" content="#1d71b9">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- style's -->
+    <!--  fancybox  -->
+    <link rel="stylesheet" href="../local/templates/main/assets/css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="../local/templates/main/assets/css/media.css">
+
+    <!--  script's  -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script type="module" src="../local/templates/main/assets/js/app.js"></script>
+    <script src="../local/templates/main/assets/js/swiper.js"></script>
+    <script src="../local/templates/main/assets/js/main.min.js" defer></script>
+    <script src="../local/templates/main/assets/js/index.js" defer></script>
+    <!-- файл var нужен только на главной -->
+    <script src="../local/templates/main/assets/js/var.js" defer></script>
+</head>
+
+<body>
+
+<!-- preloader -->
+<div id="preloader">
+    <svg width="113" height="75" viewBox="0 0 113 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.6641 20C12.6641 30.9333 12.9307 40 13.3307 40C13.7307 40 19.4641 36.2667 25.9974 31.8667L37.9974 23.6V11.8667V-2.08616e-06H25.3307H12.6641V20Z" fill="#1D71B8" class="svg-elem-1"></path>
+        <path d="M43.9979 28.7969L1.33125 57.4635L0.93125 66.1302L0.53125 74.7969L43.7313 45.9969L86.9313 17.1969L99.8646 23.9969L112.665 30.9302V22.2635V13.5969L99.7313 6.93021L86.6646 0.263535L43.9979 28.7969Z" fill="#1D71B8" class="svg-elem-2"></path>
+        <path d="M68.9274 37.8641C59.9941 43.9974 52.2608 49.3307 51.7274 49.7307C51.3274 50.2641 64.7941 50.6641 81.8608 50.6641H112.794L112.394 45.0641C111.994 39.5974 111.861 39.4641 100.127 33.0641C93.5941 29.5974 87.5941 26.6641 86.7941 26.7974C85.9941 26.7974 77.9941 31.8641 68.9274 37.8641Z" fill="#1D71B8" class="svg-elem-3"></path>
+        <path d="M26.932 65.8641C21.332 69.7307 16.2654 73.3307 15.732 73.8641C15.332 74.2641 36.932 74.6641 63.732 74.6641H112.665V66.6641V58.6641L75.0654 58.7974H37.332L26.932 65.8641Z" fill="#1D71B8" class="svg-elem-4"></path>
+    </svg>
+
+</div>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- top-page -->
+    <div class="top-page">
+        <div class="container">
+            <div class="top-page__inner">
+                <form class="top-page__geo">
+                    <div class="top-page__geo-top">
+                        <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.20858 6.08337C6.40441 6.08337 5.75024 6.73754 5.75024 7.54254C5.75024 8.34671 6.40441 9.00004 7.20858 9.00004C8.01274 9.00004 8.66691 8.34671 8.66691 7.54254C8.66691 6.73754 8.01274 6.08337 7.20858 6.08337M7.20858 10.25C5.71524 10.25 4.50024 9.03587 4.50024 7.54254C4.50024 6.04837 5.71524 4.83337 7.20858 4.83337C8.70191 4.83337 9.91691 6.04837 9.91691 7.54254C9.91691 9.03587 8.70191 10.25 7.20858 10.25" fill="white"/>
+                            <mask id="mask0_1_215" style="mask-type:luminance" x="0" y="0" width="15" height="17">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.333252 0.666687H14.0828V16.9167H0.333252V0.666687Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_1_215)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.20776 1.91669C4.1061 1.91669 1.58276 4.46419 1.58276 7.59419C1.58276 11.5767 6.26943 15.4567 7.20776 15.6634C8.1461 15.4559 12.8328 11.5759 12.8328 7.59419C12.8328 4.46419 10.3094 1.91669 7.20776 1.91669V1.91669ZM7.20776 16.9167C5.71276 16.9167 0.332764 12.29 0.332764 7.59419C0.332764 3.77419 3.41693 0.666687 7.20776 0.666687C10.9986 0.666687 14.0828 3.77419 14.0828 7.59419C14.0828 12.29 8.70276 16.9167 7.20776 16.9167V16.9167Z" fill="white"/>
+                            </g>
+                        </svg>
+                        <span>Геолокация</span>
+                        <div class="top-page__geo-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.0176 5.31051C12.8401 5.133 12.5623 5.11686 12.3666 5.2621L12.3105 5.31051L7.9974 9.6234L3.68428 5.31051C3.50677 5.133 3.229 5.11686 3.03325 5.2621L2.97718 5.31051C2.79966 5.48802 2.78353 5.7658 2.92876 5.96154L2.97718 6.01761L7.64384 10.6843C7.82135 10.8618 8.09913 10.8779 8.29487 10.7327L8.35095 10.6843L13.0176 6.01762C13.2129 5.82235 13.2129 5.50577 13.0176 5.31051Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="top-page__geo-body">
+                       <div class="top-page__geo-box">
+                           <label for="l1"><input name="city" type="radio" name="" id="l1"><span>Астана</span></label>
+                           <label for="l2"><input name="city" type="radio" name="" id="l2"><span>Армавир</span></label>
+                           <label for="l3"><input name="city" type="radio" name="" id="l3"><span>Астрахань</span></label>
+                           <label for="l4"><input name="city" type="radio" name="" id="l4"><span>Анапа</span></label>
+                           <label for="l5"><input name="city" type="radio" name="" id="l5"><span>Адлер</span></label>
+                           <label for="l6"><input name="city" type="radio" name="" id="l6"><span>Адлер</span></label>
+                           <label for="l7"><input name="city" type="radio" name="" id="l7"><span>Адлер</span></label>
+                       </div>
+                    </div>
+                </form>
+                <div class="top-page__reg">
+                    <a href="">Регистрация</a>
+                    <span></span>
+                    <a href="">Вход</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo">
+                    <!-- Смена логотипа на темный при открытии меню, на телефонах (768 <) -->
+                    <picture>
+                        <img class="logo-image logo-image_black" src="../local/templates/main/assets/images/logo.svg" alt="Логотип компании бименд">
+                        <img class="logo-image logo-image_white logo-image_none" src="../local/templates/main/assets/images/logo_white.svg" alt="Логотип компании бименд">
+                    </picture>
+                </a>
+                <button class="header__btn-burger">
+                    <span></span>
+                </button>
+                <nav class="header__navigation">
+                    <ul>
+                        <li class="header__navigation-item"><a href="">Конструктор</a></li>
+                        <li class="header__navigation-item"><a href="">Поставщики</a></li>
+                        <li class="header__navigation-item"><a href="">Тендеры</a></li>
+                        <li class="header__navigation-item"><a href="">Журналы</a></li>
+                        <!--  На десктопе скрыты (header__navigation-item_desk-none), мобильное меню -->
+                        <li class="header__navigation-item header__navigation-item_desk-none"><a href="">Помощь</a></li>
+                        <li class="header__navigation-item header__navigation-item_desk-none"><a href="">О компании</a></li>
+                    </ul>
+                    <!-- На десктопе скрыт, мобильное меню -->
+                    <div class="header__navigation-media">
+                        <p>Мы в соц. сетях:</p>
+                        <div class="header__navigation-media-list">
+                            <a href="">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="34" height="34" rx="17" fill="url(#paint0_radial_27_2147)"/>
+                                    <path d="M17 10.0361C19.253 10.0361 19.5602 10.0361 20.4819 10.0361C21.3012 10.0361 21.7108 10.241 22.0181 10.3434C22.4277 10.5482 22.7349 10.6506 23.0422 10.9578C23.3494 11.2651 23.5542 11.5723 23.6566 11.9819C23.759 12.2892 23.8614 12.6988 23.9639 13.5181C23.9639 14.4398 23.9639 14.6446 23.9639 17C23.9639 19.3554 23.9639 19.5602 23.9639 20.4819C23.9639 21.3012 23.759 21.7108 23.6566 22.0181C23.4518 22.4277 23.3494 22.7349 23.0422 23.0422C22.7349 23.3494 22.4277 23.5542 22.0181 23.6566C21.7108 23.759 21.3012 23.8614 20.4819 23.9639C19.5602 23.9639 19.3554 23.9639 17 23.9639C14.6446 23.9639 14.4398 23.9639 13.5181 23.9639C12.6988 23.9639 12.2892 23.759 11.9819 23.6566C11.5723 23.4518 11.2651 23.3494 10.9578 23.0422C10.6506 22.7349 10.4458 22.4277 10.3434 22.0181C10.241 21.7108 10.1386 21.3012 10.0361 20.4819C10.0361 19.5602 10.0361 19.3554 10.0361 17C10.0361 14.6446 10.0361 14.4398 10.0361 13.5181C10.0361 12.6988 10.241 12.2892 10.3434 11.9819C10.5482 11.5723 10.6506 11.2651 10.9578 10.9578C11.2651 10.6506 11.5723 10.4458 11.9819 10.3434C12.2892 10.241 12.6988 10.1386 13.5181 10.0361C14.4398 10.0361 14.747 10.0361 17 10.0361ZM17 8.5C14.6446 8.5 14.4398 8.5 13.5181 8.5C12.5964 8.5 11.9819 8.70482 11.4699 8.90964C10.9578 9.11446 10.4458 9.42169 9.93374 9.93374C9.42169 10.4458 9.21687 10.8554 8.90964 11.4699C8.70482 11.9819 8.60241 12.5964 8.5 13.5181C8.5 14.4398 8.5 14.747 8.5 17C8.5 19.3554 8.5 19.5602 8.5 20.4819C8.5 21.4036 8.70482 22.0181 8.90964 22.5301C9.11446 23.0422 9.42169 23.5542 9.93374 24.0663C10.4458 24.5783 10.8554 24.7831 11.4699 25.0904C11.9819 25.2952 12.5964 25.3976 13.5181 25.5C14.4398 25.5 14.747 25.5 17 25.5C19.253 25.5 19.5602 25.5 20.4819 25.5C21.4036 25.5 22.0181 25.2952 22.5301 25.0904C23.0422 24.8855 23.5542 24.5783 24.0663 24.0663C24.5783 23.5542 24.7831 23.1446 25.0904 22.5301C25.2952 22.0181 25.3976 21.4036 25.5 20.4819C25.5 19.5602 25.5 19.253 25.5 17C25.5 14.747 25.5 14.4398 25.5 13.5181C25.5 12.5964 25.2952 11.9819 25.0904 11.4699C24.8855 10.9578 24.5783 10.4458 24.0663 9.93374C23.5542 9.42169 23.1446 9.21687 22.5301 8.90964C22.0181 8.70482 21.4036 8.60241 20.4819 8.5C19.5602 8.5 19.3554 8.5 17 8.5Z" fill="white"/>
+                                    <path d="M17 12.5964C14.5422 12.5964 12.5964 14.5422 12.5964 17C12.5964 19.4578 14.5422 21.4036 17 21.4036C19.4578 21.4036 21.4036 19.4578 21.4036 17C21.4036 14.5422 19.4578 12.5964 17 12.5964ZM17 19.8675C15.4639 19.8675 14.1325 18.6386 14.1325 17C14.1325 15.4639 15.3614 14.1325 17 14.1325C18.5361 14.1325 19.8675 15.3614 19.8675 17C19.8675 18.5361 18.5361 19.8675 17 19.8675Z" fill="white"/>
+                                    <path d="M21.506 13.5181C22.0716 13.5181 22.5301 13.0596 22.5301 12.494C22.5301 11.9284 22.0716 11.4699 21.506 11.4699C20.9404 11.4699 20.4819 11.9284 20.4819 12.494C20.4819 13.0596 20.9404 13.5181 21.506 13.5181Z" fill="white"/>
+                                    <defs>
+                                        <radialGradient id="paint0_radial_27_2147" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(34.684 0.690626) scale(78.5161)">
+                                            <stop stop-color="#F9ED32"/>
+                                            <stop offset="0.36" stop-color="#EE2A7B"/>
+                                            <stop offset="0.44" stop-color="#D22A8A"/>
+                                            <stop offset="0.6" stop-color="#8B2AB2"/>
+                                            <stop offset="0.83" stop-color="#1B2AF0"/>
+                                            <stop offset="0.88" stop-color="#002AFF"/>
+                                        </radialGradient>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="34" height="34" rx="17" fill="#0B84EE"/>
+                                    <path d="M18.4089 17.3101H21.5728L22.0695 14.0765H18.4083V12.3092C18.4083 10.9659 18.8445 9.77472 20.0935 9.77472H22.1004V6.95283C21.7478 6.90492 21.002 6.80005 19.5929 6.80005C16.6504 6.80005 14.9253 8.36345 14.9253 11.9253V14.0765H11.9004V17.3101H14.9253V26.1979C15.5243 26.2885 16.1311 26.35 16.7539 26.35C17.317 26.35 17.8665 26.2983 18.4089 26.2245V17.3101Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="34" height="34" rx="17" fill="#0077FF"/>
+                                    <path d="M17.8355 22.95C11.4465 22.95 7.80223 18.4831 7.65039 11.05H10.8508C10.9559 16.5057 13.3153 18.8166 15.1841 19.2931V11.05H18.1976V15.7553C20.0431 15.5528 21.982 13.4086 22.6361 11.05H25.6496C25.4031 12.2733 24.9118 13.4315 24.2064 14.4522C23.5009 15.4729 22.5966 16.3342 21.5498 16.9822C22.7182 17.5743 23.7502 18.4123 24.5777 19.441C25.4052 20.4697 26.0094 21.6657 26.3504 22.95H23.0332C22.7271 21.8345 22.105 20.8359 21.2448 20.0795C20.3846 19.323 19.3246 18.8422 18.1976 18.6975V22.95H17.8355Z" fill="white"/>
+                                </svg>
+                            </a>
+                            <a href="">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="34" height="34" rx="17" fill="#27A6E5"/>
+                                    <path d="M23.8004 10.7118L21.2458 24.0484C21.2458 24.0484 20.8883 24.973 19.9065 24.5296L14.0123 19.8496L13.9849 19.8358C14.7811 19.0955 20.9549 13.3472 21.2248 13.0867C21.6425 12.6831 21.3831 12.4429 20.8982 12.7477L11.7787 18.745L8.26038 17.5191C8.26038 17.5191 7.70671 17.3152 7.65344 16.8717C7.59948 16.4275 8.27861 16.1873 8.27861 16.1873L22.6216 10.3606C22.6216 10.3606 23.8004 9.82419 23.8004 10.7118Z" fill="#FEFEFE"/>
+                                </svg>
+                            </a>
+                            <a href="">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="34" height="34" rx="17" fill="#48C95F"/>
+                                    <path d="M23.7378 10.2531C22.0585 8.57971 19.8195 7.65002 17.4561 7.65002C12.5427 7.65002 8.56219 11.6167 8.56219 16.513C8.56219 18.0625 8.99756 19.612 9.7439 20.9136L8.5 25.5L13.2268 24.2604C14.5329 24.9422 15.9634 25.3141 17.4561 25.3141C22.3695 25.3141 26.35 21.3474 26.35 16.4511C26.2878 14.1578 25.4171 11.9266 23.7378 10.2531ZM21.7476 19.674C21.561 20.1698 20.6902 20.6656 20.2549 20.7276C19.8817 20.7896 19.3841 20.7896 18.8866 20.6656C18.5756 20.5417 18.1402 20.4177 17.6427 20.1698C15.4037 19.2401 13.9732 17.0089 13.8488 16.8229C13.7244 16.699 12.9159 15.6453 12.9159 14.5297C12.9159 13.4141 13.4756 12.9183 13.6622 12.6703C13.8488 12.4224 14.0976 12.4224 14.2841 12.4224C14.4085 12.4224 14.5951 12.4224 14.7195 12.4224C14.8439 12.4224 15.0305 12.3604 15.2171 12.7943C15.4037 13.2281 15.839 14.3438 15.9012 14.4058C15.9634 14.5297 15.9634 14.6537 15.9012 14.7776C15.839 14.9016 15.7768 15.0255 15.6524 15.1495C15.528 15.2735 15.4037 15.4594 15.3415 15.5214C15.2171 15.6453 15.0927 15.7693 15.2171 15.9552C15.3415 16.2031 15.7768 16.8849 16.461 17.5047C17.3317 18.2485 18.0159 18.4964 18.2646 18.6203C18.5134 18.7443 18.6378 18.6823 18.7622 18.5584C18.8866 18.4344 19.322 17.9386 19.4463 17.6906C19.5707 17.4427 19.7573 17.5047 19.9439 17.5667C20.1305 17.6287 21.25 18.1865 21.4366 18.3104C21.6854 18.4344 21.8098 18.4964 21.8719 18.5584C21.9341 18.7443 21.9341 19.1781 21.7476 19.674Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main class="main">
+        <section class="section-top">
+            <div class="container">
+                <div class="section-top__inner">
+                    <div class="section-top__box">
+                        <h1>Создай эскизный проект за <mark>1 час</mark></h1>
+                        <!-- mark - выделть тектс синим цветом -->
+                        <h2><mark>Bimend</mark> – интуитивно понятный web-конструктор для:</h2>
+                        <ul>
+                            <li>Проектирования зданий и территории;</li>
+                            <li>Планирования помещений и дизайна интерьера;</li>
+                            <li>Автоматического расчёта перечня и количества строительных и отделочных материалов.</li>
+                        </ul>
+                        <!-- data-da, атрибут для скрипта по смене положения элемента на странице -->
+                        <a data-da=".section-top .container, 480, last" class="section-top__btn btn" href="#">Создать проект</a>
+                    </div>
+                    <picture>
+                        <img src="../local/templates/main/assets/images/sectionOne/1.png" alt="Весь функционал бесплатен">
+                    </picture>
+                </div>
+        
+            </div>
+            <!-- Декоротивный элемент для, прокрутки в низ  -->
+            <a class="section-top-decor" href="#webConstructor">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.46967 7.96967C4.73594 7.7034 5.1526 7.6792 5.44621 7.89705L5.53033 7.96967L12 14.439L18.4697 7.96967C18.7359 7.7034 19.1526 7.6792 19.4462 7.89705L19.5303 7.96967C19.7966 8.23594 19.8208 8.6526 19.6029 8.94621L19.5303 9.03033L12.5303 16.0303C12.2641 16.2966 11.8474 16.3208 11.5538 16.1029L11.4697 16.0303L4.46967 9.03033C4.17678 8.73744 4.17678 8.26256 4.46967 7.96967Z" fill="#1D71B9"/>
+                </svg>
+            </a>
+        </section>
+        <section id="webConstructor" class="web-constructor">
+            <div class="web-constructor__title title-border">
+                <h2>
+                    Инструменты<br> web-конструктора
+                </h2>
+            </div>
+            <div class="web-constructor__info">
+                <!-- --first первая линия с блоками -->
+                <div class="web-constructor__info-item --first">
+                    <div class="web-constructor__info-item-box">
+                        <h3 class="web-constructor__info-title">Интерьеры и экстерьеры</h3>
+                        <p>Отделка внутренних и наружных стен,<br> напольных и потолочных покрытий,<br> интерьеры: мебель для кухни, спальни,<br> гостиной и ванной, бытовая техника</p>
+                    </div>
+                    <div class="web-constructor__info-item-box">
+                        <h3 class="web-constructor__info-title">Проектирование сооружений</h3>
+                        <p>Фундамент, стены и колонны, окна<br class="_br-one"> и двери,<br class="_br-none-1440"> лестницы, фундамент, кровати</p>
+                    </div>
+                </div>
+                <!-- Декоротивная линия по центру, между первой и второй линией элемнетов -->
+                <div class="web-constructor__decor-line"></div>
+                <!-- --last последняя линия с блоками -->
+                <div class="web-constructor__info-item --last">
+                    <div class="web-constructor__info-item-box">
+                        <h3 class="web-constructor__info-title">Инженерные сети</h3>
+                        <p>Сантехника, освещение, электрика,<br> приборы отопления</p>
+                    </div>
+                    <div class="web-constructor__info-item-box">
+                        <h3 class="web-constructor__info-title">Планировка территории</h3>
+                        <p>Ограждения, дорожки, растительность,<br> освещение, садовая мебель</p>
+                    </div>
+                </div>
+                <!-- data-da, атрибут для скрипта по смене положения элемента на странице -->
+                <div data-da=".web-constructor__info, 768, first" class="web-constructor__oval">
+                    2D/3D<br>
+                    <p>Генерация чертежей</p>
+                    <p>Реалистичная визуализация</p>
+                </div>
+        
+                <a class="web-constructor__btn btn" href="#">Начать бесплатно</a>
+        
+            </div>
+        </section>
+        <section class="sketch">
+            <div class="container">
+                <div class="sketch__title title-border">
+                    <h2>
+                        Полноценный<br> эскизный проект
+                    </h2>
+                </div>
+                <h3 class="sketch__sub-title">
+                    Автоматически генерируемая проектная документация:
+                </h3>
+        
+                <ul class="sketch__list">
+                    <!-- Все br c непонятным классом для пиксель перфетк -->
+                    <li class="sketch__item">
+                        <p>План фундамента, этажей, этажей<br class="_br-none-1440"> с расстановкой (мебели, сантехники,<br class="_br-none-1440"> бытовой техники, розеток и<br class="_br-none-1440"> выключателей,<br> приборов освещения);</p>
+                    </li>
+                    <li class="sketch__item">
+                        <p>План перекрытий, напольных<br class="_br-none-1440"> и потолочных<br> покрытий, кровли,<br class="_br-none-1440"> фасад в осях,<br> вертикальные разрезы;</p>
+                    </li>
+                    <li class="sketch__item">
+                        <p>Ведомость материалов, отделки,<br> стоимости материалов.</p>
+                    </li>
+                </ul>
+        
+                <a
+                   class="sketch__link"
+                    href="../local/templates/main/assets/file/test pdf.pdf"
+                   download
+                   >
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect y="0.5" width="24" height="24" fill="url(#pattern0)"/>
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_22_87" transform="scale(0.00195312)"/>
+                            </pattern>
+                            <image id="image0_22_87" width="512" height="512" xlink:href="data:image/png;base64,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"/>
+                        </defs>
+                    </svg>
+        
+                    <span>
+                        Пример PDF шаблона
+                    </span>
+                </a>
+            </div>
+        </section>
+        <section class="photo-block">
+            <div class="container">
+                <div class="photo-block__inner">
+                    <div class="photo-block__box">
+                        <div class="photo-block__info">
+                            <h2 class="photo-block__info-title">
+                                Почему BIM?
+                            </h2>
+                            <ul>
+                                <!-- Все br c непонятным классом для пиксель перфетк -->
+                                <li>Каждый элемент конструкции<br> знает<br class="_br-none-1440"><br class="_br-none-834"><br class="_br-none-480"> из чего он сделан;</li>
+                                <li>Каждому элементу конструкции заданы<br class="_br-none-480"> формулы<br><br class="_br-none-1440"><br class="_br-none-834">  подсчёта количества строй<br class="_br-none-480"> материалов;</li>
+                                <li>Выбор материалов доступен из<br><br class="_br-none-834"><br class="_br-none-480">  справочника<br class="_br-none-1440"> из 15 000 000 позиций;</li>
+                                <li>Каждый материал в справочнике<br><br class="_br-none-1440 _br-none-1280"><br class="_br-none-834"><br class="_br-none-480">  имеет заданные свойства.</li>
+        
+                            </ul>
+                        </div>
+                        <!-- data-da, атрибут для скрипта по смене положения элемента на странице -->
+                        <picture data-da=".photo-block__info, 768, 1">
+                            <img src="../local/templates/main/assets/images/photo_block/photo_block_one.png" alt="Картинка кирпичная стена">
+                        </picture>
+                    </div>
+                    <!-- Для того, чтобы развернуть блок с фото -->
+                    <div class="photo-block__box photo-block__box_reverse">
+                        <div class="photo-block__info">
+                            <h2 class="photo-block__info-title">
+                                Почему END?
+                            </h2>
+                            <!-- Отступ вниз у списка -->
+                            <ul class="--mb">
+                                <!-- Все br c непонятным классом для пиксель перфетк -->
+                                <li>Многопользовательский режим;</li>
+                                <li>Создавайте разные версии<br> проекта<br class="_br-none-1440"><br class="_br-none-834"><br class="_br-none-480">  и выбирайте лучший;</li>
+                                <li>Общайтесь в чате друг с другом<br><br class="_br-none-1440"><br class="_br-none-834"><br class="_br-none-480">  внутри каждого проекта;</li>
+                                <li>Работайте из браузера<br class="_br-none-1280 none"> в любой точке мира.</li>
+        
+                            </ul>
+                            <!-- data-da, атрибут для скрипта по смене положения элемента на странице -->
+                            <a class="photo-block__box-btn btn" href="#"  data-da=".photo-block__inner, 992, last">
+                                Открыть конструктор
+                            </a>
+                        </div>
+                        <!-- data-da, атрибут для скрипта по смене положения элемента на странице -->
+                        <picture data-da=".photo-block__box.photo-block__box_reverse .photo-block__info, 768, 1">
+                            <img src="../local/templates/main/assets/images/photo_block/photo_block_two.png" alt="Картинка кирпичная стена">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="interface">
+            <div class="container">
+                <div class="interface__inner">
+                    <div class="interface__box">
+                        <h2 class="interface__title title-main">Интуитивно понятный интерфейс</h2>
+                        <ul>
+                            <!-- Все br c непонятным классом для пиксель перфетк -->
+                            <li>Автоматически генерируемая<br class="_br-none-1440"> проектная документация;</li>
+                            <li>50% функционала понятно<br class="_br-none-480"> с первого взгляда;</li>
+                            <li>Посмотрите один роз видео инструкцию<br> и используйте 100% возможностей конструктора.</li>
+                        </ul>
+                        <a class="interface__btn btn" href="#">
+                            Открыть конструктор Bimend
+                        </a>
+                    </div>
+                    <!-- data-da, атрибут для скрипта по смене положения элемента на странице -->
+                    <div class="interface__photo"  data-da=".interface__box, 1080, 1">
+                        <a  class="interface__btn-play" data-fancybox href="https://www.youtube.com/watch?v=P27MjV8XFz8">
+                            <svg width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.4404 13.3389L0.940432 26.3292L0.940433 0.348485L23.4404 13.3389Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <picture>
+                            <img src="../local/templates/main/assets/images/interface/interface_photo.png" alt="фото интуитивно понятный интерфейс">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                <h2 class="news__title title-main title-main_black">Анонсы и новости</h2>
+                <div class="news__inner news__slider">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide news__item">
+                        <a href="#">
+                            <picture>
+                                <img src="../local/templates/main/assets/images/news/1.png" alt="Фото новости 1">
+                            </picture>
+                        </a>
+                        <div class="news__item-info">
+                            <h3 class="news__item-title">Заголовок</h3>
+                            <p class="news__item-txt">Вывод новостей в две колонки, каждая из которых будет состоять из фото, заголовка, текста в 5 строк и кнопки “подробнее” Вывод новостей в две колонки, каждая из которых будет состоять из фото</p>
+                            <a class="news__item-link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <!-- Клас для того, чтобы блок развернуло -->
+                    <div class="swiper-slide news__item news__item_reverse">
+                        <a href="#">
+                            <picture>
+                                <img src="../local/templates/main/assets/images/news/2.png" alt="Фото новости 2">
+                            </picture>
+                        </a>
+                        <div class="news__item-info">
+                            <h3 class="news__item-title">Заголовок</h3>
+                            <p class="news__item-txt">Вывод новостей в две колонки, каждая из которых будет состоять из фото, заголовка, текста в 5 строк и кнопки “подробнее” Вывод новостей в две колонки, каждая из которых будет состоять из фото</p>
+                            <a class="news__item-link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide news__item">
+                            <a href="#">
+                                <picture>
+                                    <img src="../local/templates/main/assets/images/news/1.png" alt="Фото новости 1">
+                                </picture>
+                            </a>
+                            <div class="news__item-info">
+                                <h3 class="news__item-title">Заголовок</h3>
+                                <p class="news__item-txt">Вывод новостей в две колонки, каждая из которых будет состоять из фото, заголовка, текста в 5 строк и кнопки “подробнее” Вывод новостей в две колонки, каждая из которых будет состоять из фото</p>
+                                <a class="news__item-link" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                        <!-- Клас для того, чтобы блок развернуло -->
+                    <div class="swiper-slide news__item news__item_reverse">
+                            <a href="#">
+                                <picture>
+                                    <img src="../local/templates/main/assets/images/news/2.png" alt="Фото новости 2">
+                                </picture>
+                            </a>
+                            <div class="news__item-info">
+                                <h3 class="news__item-title">Заголовок</h3>
+                                <p class="news__item-txt">Вывод новостей в две колонки, каждая из которых будет состоять из фото, заголовка, текста в 5 строк и кнопки “подробнее” Вывод новостей в две колонки, каждая из которых будет состоять из фото</p>
+                                <a class="news__item-link" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    <div class="swiper-slide news__item">
+                            <a href="#">
+                                <picture>
+                                    <img src="../local/templates/main/assets/images/news/1.png" alt="Фото новости 1">
+                                </picture>
+                            </a>
+                            <div class="news__item-info">
+                                <h3 class="news__item-title">Заголовок</h3>
+                                <p class="news__item-txt">Вывод новостей в две колонки, каждая из которых будет состоять из фото, заголовка, текста в 5 строк и кнопки “подробнее” Вывод новостей в две колонки, каждая из которых будет состоять из фото</p>
+                                <a class="news__item-link" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                        <!-- Клас для того, чтобы блок развернуло -->
+                    <div class="swiper-slide news__item news__item_reverse">
+                            <a href="#">
+                                <picture>
+                                    <img src="../local/templates/main/assets/images/news/2.png" alt="Фото новости 2">
+                                </picture>
+                            </a>
+                            <div class="news__item-info">
+                                <h3 class="news__item-title">Заголовок</h3>
+                                <p class="news__item-txt">Вывод новостей в две колонки, каждая из которых будет состоять из фото, заголовка, текста в 5 строк и кнопки “подробнее” Вывод новостей в две колонки, каждая из которых будет состоять из фото</p>
+                                <a class="news__item-link" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                        
+        
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a class="footer__logo" href="/" >
+                    <img src="../local/templates/main/assets/images/logo_white.svg" alt="белый логотип компании">
+                </a>
+                
+                <div class="footer__menu">
+                    <ul>
+                        <li class="footer__item footer__item_pos-one">
+                            <a class="footer__menu-link" href="#">О компании</a>
+                        </li>
+                        <li class="footer__item footer__item_pos-two">
+                            <a class="footer__menu-link" href="#">Помощь</a>
+                        </li>
+                        <li class="footer__item footer__item_flex">
+                            <p>
+                                Мы в соц сетях:
+                            </p>
+                            <div class="footer__media">
+                                <!-- instagram -->
+                                <a target="_blank" href="https://www.instagram.com/">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="34" height="34" rx="17" fill="url(#paint0_radial_22_185)"/>
+                                        <path d="M17 10.0361C19.253 10.0361 19.5602 10.0361 20.4819 10.0361C21.3012 10.0361 21.7108 10.241 22.0181 10.3434C22.4277 10.5482 22.7349 10.6506 23.0422 10.9578C23.3494 11.2651 23.5542 11.5723 23.6566 11.9819C23.759 12.2892 23.8614 12.6988 23.9639 13.5181C23.9639 14.4398 23.9639 14.6446 23.9639 17C23.9639 19.3554 23.9639 19.5602 23.9639 20.4819C23.9639 21.3012 23.759 21.7108 23.6566 22.0181C23.4518 22.4277 23.3494 22.7349 23.0422 23.0422C22.7349 23.3494 22.4277 23.5542 22.0181 23.6566C21.7108 23.759 21.3012 23.8614 20.4819 23.9639C19.5602 23.9639 19.3554 23.9639 17 23.9639C14.6446 23.9639 14.4398 23.9639 13.5181 23.9639C12.6988 23.9639 12.2892 23.759 11.9819 23.6566C11.5723 23.4518 11.2651 23.3494 10.9578 23.0422C10.6506 22.7349 10.4458 22.4277 10.3434 22.0181C10.241 21.7108 10.1386 21.3012 10.0361 20.4819C10.0361 19.5602 10.0361 19.3554 10.0361 17C10.0361 14.6446 10.0361 14.4398 10.0361 13.5181C10.0361 12.6988 10.241 12.2892 10.3434 11.9819C10.5482 11.5723 10.6506 11.2651 10.9578 10.9578C11.2651 10.6506 11.5723 10.4458 11.9819 10.3434C12.2892 10.241 12.6988 10.1386 13.5181 10.0361C14.4398 10.0361 14.747 10.0361 17 10.0361ZM17 8.5C14.6446 8.5 14.4398 8.5 13.5181 8.5C12.5964 8.5 11.9819 8.70482 11.4699 8.90964C10.9578 9.11446 10.4458 9.42169 9.93374 9.93374C9.42169 10.4458 9.21687 10.8554 8.90964 11.4699C8.70482 11.9819 8.60241 12.5964 8.5 13.5181C8.5 14.4398 8.5 14.747 8.5 17C8.5 19.3554 8.5 19.5602 8.5 20.4819C8.5 21.4036 8.70482 22.0181 8.90964 22.5301C9.11446 23.0422 9.42169 23.5542 9.93374 24.0663C10.4458 24.5783 10.8554 24.7831 11.4699 25.0904C11.9819 25.2952 12.5964 25.3976 13.5181 25.5C14.4398 25.5 14.747 25.5 17 25.5C19.253 25.5 19.5602 25.5 20.4819 25.5C21.4036 25.5 22.0181 25.2952 22.5301 25.0904C23.0422 24.8855 23.5542 24.5783 24.0663 24.0663C24.5783 23.5542 24.7831 23.1446 25.0904 22.5301C25.2952 22.0181 25.3976 21.4036 25.5 20.4819C25.5 19.5602 25.5 19.253 25.5 17C25.5 14.747 25.5 14.4398 25.5 13.5181C25.5 12.5964 25.2952 11.9819 25.0904 11.4699C24.8855 10.9578 24.5783 10.4458 24.0663 9.93374C23.5542 9.42169 23.1446 9.21687 22.5301 8.90964C22.0181 8.70482 21.4036 8.60241 20.4819 8.5C19.5602 8.5 19.3554 8.5 17 8.5Z" fill="white"/>
+                                        <path d="M17 12.5964C14.5422 12.5964 12.5964 14.5422 12.5964 17C12.5964 19.4578 14.5422 21.4036 17 21.4036C19.4578 21.4036 21.4036 19.4578 21.4036 17C21.4036 14.5422 19.4578 12.5964 17 12.5964ZM17 19.8675C15.4639 19.8675 14.1325 18.6386 14.1325 17C14.1325 15.4639 15.3614 14.1325 17 14.1325C18.5361 14.1325 19.8675 15.3614 19.8675 17C19.8675 18.5361 18.5361 19.8675 17 19.8675Z" fill="white"/>
+                                        <path d="M21.506 13.5181C22.0716 13.5181 22.5301 13.0596 22.5301 12.494C22.5301 11.9284 22.0716 11.4699 21.506 11.4699C20.9404 11.4699 20.4819 11.9284 20.4819 12.494C20.4819 13.0596 20.9404 13.5181 21.506 13.5181Z" fill="white"/>
+                                        <defs>
+                                            <radialGradient id="paint0_radial_22_185" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(34.684 0.690626) scale(78.5161)">
+                                                <stop stop-color="#F9ED32"/>
+                                                <stop offset="0.36" stop-color="#EE2A7B"/>
+                                                <stop offset="0.44" stop-color="#D22A8A"/>
+                                                <stop offset="0.6" stop-color="#8B2AB2"/>
+                                                <stop offset="0.83" stop-color="#1B2AF0"/>
+                                                <stop offset="0.88" stop-color="#002AFF"/>
+                                            </radialGradient>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <!-- facebook -->
+                                <a target="_blank" href="https://ru-ru.facebook.com/">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="34" height="34" rx="17" fill="#0B84EE"/>
+                                        <path d="M18.4084 17.3099H21.5723L22.069 14.0763H18.4078V12.3089C18.4078 10.9656 18.844 9.77448 20.093 9.77448H22.0999V6.95258C21.7473 6.90468 21.0015 6.7998 19.5924 6.7998C16.6499 6.7998 14.9248 8.36321 14.9248 11.9251V14.0763H11.8999V17.3099H14.9248V26.1977C15.5238 26.2883 16.1306 26.3498 16.7535 26.3498C17.3165 26.3498 17.866 26.298 18.4084 26.2242V17.3099Z" fill="white"/>
+                                    </svg>
+                                </a>
+                                <!-- vk -->
+                                <a target="_blank" href="https://vk.com/bimend">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="34" height="34" rx="17" fill="#0077FF"/>
+                                        <path d="M17.835 22.9498C11.446 22.9498 7.80174 18.4828 7.6499 11.0498H10.8503C10.9554 16.5055 13.3148 18.8164 15.1836 19.2928V11.0498H18.1971V15.755C20.0426 15.5525 21.9815 13.4084 22.6356 11.0498H25.6491C25.4026 12.273 24.9113 13.4312 24.2059 14.4519C23.5004 15.4727 22.5961 16.3339 21.5493 16.9819C22.7177 17.574 23.7497 18.4121 24.5772 19.4408C25.4047 20.4695 26.0089 21.6655 26.3499 22.9498H23.0327C22.7266 21.8343 22.1045 20.8357 21.2443 20.0792C20.3841 19.3227 19.3241 18.842 18.1971 18.6973V22.9498H17.835Z" fill="white"/>
+                                    </svg>
+                                </a>
+                                <!-- telegram -->
+                                <a target="_blank" href="https://web.telegram.org/">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="34" height="34" rx="17" fill="#27A6E5"/>
+                                        <path d="M23.7999 10.7121L21.2453 24.0486C21.2453 24.0486 20.8879 24.9733 19.906 24.5298L14.0118 19.8499L13.9845 19.8361C14.7806 19.0958 20.9544 13.3475 21.2243 13.0869C21.642 12.6834 21.3827 12.4431 20.8977 12.748L11.7782 18.7452L8.25989 17.5193C8.25989 17.5193 7.70622 17.3154 7.65296 16.8719C7.59899 16.4277 8.27812 16.1875 8.27812 16.1875L22.6211 10.3608C22.6211 10.3608 23.7999 9.82444 23.7999 10.7121Z" fill="#FEFEFE"/>
+                                    </svg>
+                                </a>
+                                <!-- wat -->
+                                <a target="_blank" href="https://www.whatsapp.com/">
+                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="34" height="34" rx="17" fill="#48C95F"/>
+                                        <path d="M23.7378 10.253C22.0585 8.57959 19.8195 7.6499 17.4561 7.6499C12.5427 7.6499 8.56219 11.6166 8.56219 16.5129C8.56219 18.0624 8.99756 19.6119 9.7439 20.9134L8.5 25.4999L13.2268 24.2603C14.5329 24.9421 15.9634 25.314 17.4561 25.314C22.3695 25.314 26.35 21.3473 26.35 16.4509C26.2878 14.1577 25.4171 11.9265 23.7378 10.253ZM21.7476 19.6739C21.561 20.1697 20.6902 20.6655 20.2549 20.7275C19.8817 20.7895 19.3841 20.7895 18.8866 20.6655C18.5756 20.5416 18.1402 20.4176 17.6427 20.1697C15.4037 19.24 13.9732 17.0088 13.8488 16.8228C13.7244 16.6989 12.9159 15.6452 12.9159 14.5296C12.9159 13.414 13.4756 12.9181 13.6622 12.6702C13.8488 12.4223 14.0976 12.4223 14.2841 12.4223C14.4085 12.4223 14.5951 12.4223 14.7195 12.4223C14.8439 12.4223 15.0305 12.3603 15.2171 12.7942C15.4037 13.228 15.839 14.3437 15.9012 14.4056C15.9634 14.5296 15.9634 14.6535 15.9012 14.7775C15.839 14.9015 15.7768 15.0254 15.6524 15.1494C15.528 15.2733 15.4037 15.4593 15.3415 15.5213C15.2171 15.6452 15.0927 15.7692 15.2171 15.9551C15.3415 16.203 15.7768 16.8848 16.461 17.5046C17.3317 18.2483 18.0159 18.4963 18.2646 18.6202C18.5134 18.7442 18.6378 18.6822 18.7622 18.5582C18.8866 18.4343 19.322 17.9384 19.4463 17.6905C19.5707 17.4426 19.7573 17.5046 19.9439 17.5666C20.1305 17.6285 21.25 18.1864 21.4366 18.3103C21.6854 18.4343 21.8098 18.4963 21.8719 18.5582C21.9341 18.7442 21.9341 19.178 21.7476 19.6739Z" fill="white"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>

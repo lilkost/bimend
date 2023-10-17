@@ -1,0 +1,36 @@
+:root {
+  --font-family-regular: 'GOST type A';
+  --font-family-bold:'GOST type A bold';
+  --bimend-gray: #48565F;
+  --bimend-black: #000000;
+  --bimend-accent: #1D71B9;
+  --index: (1vw + 1vh);
+}
+
+@mixin flex($fd, $ai, $jc) {
+  display: flex;
+  flex-direction: $fd;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin grid($col, $row) {
+  display: grid;
+  grid-template-columns: $col;
+  grid-template-rows: $row;
+}
+
+@mixin txt($fw, $fsz, $lh, $col) {
+  font-weight: $fw;
+  font-size: $fsz;
+  line-height: $lh;
+  color: $col;
+}
+
+@mixin txtDots ($count) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $count;
+  -webkit-box-orient: vertical;
+}

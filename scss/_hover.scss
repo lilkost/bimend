@@ -1,0 +1,52 @@
+@media (min-width: 1000px) {
+  .header__navigation a:hover:before {
+    right: 10px;
+    left: 10px;
+  }
+  .btn:hover {
+    opacity: .8;
+  }
+  .sketch__link:hover span:before{
+    left: 0;
+    right: 0;
+  }
+  .interface__btn-play:hover {
+    opacity: .8;
+  }
+  .news__item-link:hover:before{
+    left: 9px;
+    right: 9px;
+  }
+  .footer__media a:hover {
+    filter: contrast(1.4);
+  }
+  .footer__menu-link:hover:before{
+    left: 0;
+    right: 0;
+  }
+  .top-page__geo-top:hover {
+    span {
+      color: rgba(255,255,255,0.8);
+    }
+    svg path,
+    svg mask path{
+      fill: rgba(255,255,255,0.8);
+    }
+  }
+  .top-page__reg a:hover {
+    opacity: .8;
+  }
+  .error-page__link:hover:before{
+    right: 0;
+    left: 0;
+  }
+  .link__back:hover:before{
+    right: 0;
+    left: 0;
+  }
+  .pagination__btn:hover{
+    background: var(--bimend-accent);
+    color: white;
+    border-color: var(--bimend-accent);
+  }
+}
